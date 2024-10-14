@@ -14,6 +14,7 @@
     }
     #demo {
       margin: var(--ddd-spacing-2);
+      display: inline-block;
     }
     un-sdg {
       margin: var(--ddd-spacing-2);
@@ -28,22 +29,86 @@
       background-color: var(--ddd-accent-2);
       color: var(--ddd-primary-17);
     }
+    h2{
+      text-align: center;
+      text-decoration: underline;
+    }
   </style>
   <title>un-sdg</title>
 </head>
 
 <body>
+  
+  <h1> un-sdg Web Component</h1>
+  <h2>SDG Goals 1 through 17 / Circle / All</h2>
+  <button id="random-goal-button">Change Goal</button> <!-- button to change the goal randomly -->
+  <div>
+    <un-sdg goal="1" id="first-goal"></un-sdg>
+    <un-sdg goal="2"></un-sdg>
+    <un-sdg goal="3"></un-sdg>
+    <un-sdg goal="4"></un-sdg>
+    <un-sdg goal="5"></un-sdg>
+    <un-sdg goal="6"></un-sdg>
+    <un-sdg goal="7"></un-sdg>
+    <un-sdg goal="8"></un-sdg>
+    <un-sdg goal="9"></un-sdg>
+    <un-sdg goal="10"></un-sdg>
+    <un-sdg goal="11"></un-sdg>
+    <un-sdg goal="12"></un-sdg>
+    <un-sdg goal="13"></un-sdg>
+    <un-sdg goal="14"></un-sdg>
+    <un-sdg goal="15"></un-sdg>
+    <un-sdg goal="16"></un-sdg>
+    <un-sdg goal="17"></un-sdg>
+    <un-sdg goal="circle"></un-sdg>
+    <un-sdg goal="all"></un-sdg>
+    
+  </div>
+
+  <h2>Color Only for SDG Goals 1 through 17</h2>
+  <div>
+    <un-sdg goal="1" colorOnly="true" id="first-goal"></un-sdg>
+    <un-sdg goal="2" colorOnly="true"></un-sdg>
+    <un-sdg goal="3" colorOnly="true"></un-sdg>
+    <un-sdg goal="4" colorOnly="true"></un-sdg>
+    <un-sdg goal="5" colorOnly="true"></un-sdg>
+    <un-sdg goal="6" colorOnly="true"></un-sdg>
+    <un-sdg goal="7" colorOnly="true"></un-sdg>
+    <un-sdg goal="8" colorOnly="true"></un-sdg>
+    <un-sdg goal="9" colorOnly="true"></un-sdg>
+    <un-sdg goal="10" colorOnly="true"></un-sdg>
+    <un-sdg goal="11" colorOnly="true"></un-sdg>
+    <un-sdg goal="12" colorOnly="true"></un-sdg>
+    <un-sdg goal="13" colorOnly="true"></un-sdg>
+    <un-sdg goal="14" colorOnly="true"></un-sdg>
+    <un-sdg goal="15" colorOnly="true"></un-sdg>
+    <un-sdg goal="16" colorOnly="true"></un-sdg>
+    <un-sdg goal="17" colorOnly="true"></un-sdg>
+  </div>
+
   <div id="demo">
-    <h1>un-sdg</h1>
+    
     <!-- this is going to do whatever the tag's defaults are -->
     <h2>Default</h2>
-    <un-sdg></un-sdg>
+    <un-sdg goal="circle"></un-sdg>
     <h2>Slot usage</h2>
-    <un-sdg data-accent="2" data-primary="17"><div>Sample slot content</div></un-sdg>
+    <un-sdg goal="5" label="Custom Label for Goal 5"></un-sdg>
     <h2>Property usage</h2>
-    <un-sdg id="example" title="Sample property title"></un-sdg>
+    <un-sdg goal="all"></un-sdg>
   </div>
+
   <script type="module" src="./un-sdg.js"></script>
+  <script>
+    // gets the first goal element and the button itself
+    const _firstGoal = document.getElementById('first-goal');
+    const randomGoalButton = document.getElementById('random-goal-button');
+
+    // Event listener used to change the goal to a random number from 1 and 17
+    randomGoalButton.addEventListener('click', () => {
+      const randomGoal = Math.floor(Math.random() * 17) + 1; // Random number from 1 and 17
+      _firstGoal.setAttribute('goal', randomGoal);
+    });
+  </script>
 
   <!-- Take HAX, the Web and you further down the rabbit hole -->
   <style>
