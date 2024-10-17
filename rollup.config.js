@@ -21,14 +21,13 @@ export default {
     html({
       minify: true,
     }),
-    /** Resolve bare module imports */
+    /** Resolve bare module imports */    
+    nodeResolve(),
     copy({
       targets: [
         { src: 'lib/', dest: 'dist' }
       ]
     }),
-    
-    nodeResolve(),
     /** Minify JS, compile JS to a lower language target */
     esbuild({
       minify: true,
