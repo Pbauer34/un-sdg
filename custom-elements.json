@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "un-sdg.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "`un-sdg`",
+          "name": "unSdg",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tag",
+              "static": true
+            },
+            {
+              "kind": "method",
+              "name": "updateGoalData"
+            },
+            {
+              "kind": "field",
+              "name": "haxProperties",
+              "static": true,
+              "description": "haxProperties integration via file reference"
+            },
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "privacy": "public",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "goal",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"1\"",
+              "privacy": "public",
+              "attribute": "goal",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "privacy": "public",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "colorOnly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "privacy": "public",
+              "attribute": "colorOnly",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "_currentSource",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "privacy": "public",
+              "attribute": "_currentSource"
+            },
+            {
+              "kind": "field",
+              "name": "alt",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "privacy": "public",
+              "attribute": "alt"
+            },
+            {
+              "kind": "field",
+              "name": "t",
+              "type": {
+                "text": "object"
+              },
+              "default": "{\n      ...this.t,\n      title: \"Title\",\n    }"
+            },
+            {
+              "kind": "field",
+              "name": "",
+              "privacy": "public",
+              "attribute": ""
+            }
+          ],
+          "attributes": [
+            {
+              "name": "",
+              "fieldName": ""
+            },
+            {
+              "name": "title",
+              "fieldName": "title"
+            },
+            {
+              "name": "goal",
+              "fieldName": "goal"
+            },
+            {
+              "name": "label",
+              "fieldName": "label"
+            },
+            {
+              "name": "colorOnly",
+              "fieldName": "colorOnly"
+            },
+            {
+              "name": "_currentSource",
+              "fieldName": "_currentSource"
+            },
+            {
+              "name": "alt",
+              "fieldName": "alt"
+            }
+          ],
+          "mixins": [
+            {
+              "name": "DDDSuper",
+              "package": "@haxtheweb/d-d-d/d-d-d.js"
+            },
+            {
+              "name": "I18NMixin",
+              "package": "@haxtheweb/i18n-manager/lib/I18NMixin.js"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "un-sdg",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "unSdg",
+          "declaration": {
+            "name": "unSdg",
+            "module": "un-sdg.js"
+          }
+        }
+      ]
+    }
+  ]
+}
